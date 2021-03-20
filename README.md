@@ -56,8 +56,7 @@ a better and better answer. It is the [Bogosort](https://en.wikipedia.org/wiki/B
 ### How do I use this?
 
 - Clone or download this repository and open it in the text editor/IDE/application of your choice.
-- To use the Traveling Husky, run it just as you would run any other Java file. Navigate to `Main.java`, open the Terminal,
-  and type the command `javac Main.java && java Main`
+- To use the Traveling Husky, run it just as you would run any other Java file. Open `Main.java` and type `javac Main.java && java Main` into a terminal.
     - **Tip**: This program prints output to the terminal. For optimal viewing, expand your Terminal so you can see more of the program output. Type `clear` between different runs/compiles if you want to have an empty terminal each time.
     - **Tip 2**: This program prints each character to the output one by one like Pokémon!, instead of the entire string. 
       If you want to see the entire string print, press "enter" while the program is printing to auto-complete the rest of the string.
