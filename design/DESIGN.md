@@ -47,4 +47,4 @@ print statements that tell the user how to use the program, abstracting away the
 `Main.java` also has its own print method which is implemented to make each character print one by one (like Pokémon or a video
 game) because having large blocks of Strings print all at once is unreadable and not as fun :). However, if the printing is taking
 too long, the user can simply hit `enter` and the entire String will print (like a skippable cutscene). This was implemented
-using Thread.sleep() and System.in.available().
+using `Thread.sleep()` and `System.in.available()`.
