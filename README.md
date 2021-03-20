@@ -1,12 +1,10 @@
 # The Traveling Husky
 
-[Link to video presentation](https://www.loom.com/share/21704b35431c44e3a6a878358555c7c9?sharedAppSource=personal_library)
-
 ### An analysis of a difficult problem
 
-The [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) is a very famous problem in computer
-science. It's an NP-hard problem, which means not only is it hard to solve, but once you solve it, it's hard to even verify you're correct!
-In case you're not familiar with it, it asks:
+The [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) is a famous problem in computer
+science. It's an NP-hard problem, which means not only is it difficult to solve, but once solved, it's hard to even the solution is correct!
+The problem asks:
 
 **Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?**
 
@@ -16,31 +14,31 @@ is easier said than done. Unfortunately, the brute force solution solves the tra
 That's 😱O(N!)😱! This runtime is unacceptable (unless you want to wait around for a long time), but the solution is guaranteed to 
 be 100% accurate.
 
-What if we didn't care about 100% accuracy? After all, if I gave you 200 cities and asked you to find the shortest route between them,
-being off by some cities doesn't really matter that much. Plus, calculating the answer using brute force would take factorial time.
+### What if we didn't care about 100% accuracy? 
+
+After all, if you weregiven 200 cities and asked to find the shortest route between them,
+being off by a few cities doesn't really matter *that* much. Plus, calculating the answer using brute force would take factorial time.
 200 factorial is such a large number [Google can't even define it](https://www.google.com/search?q=200!&rlz=1C1CHBF_enUS852US852&oq=200!)!
 
 Therefore, since we don't necessarily care about 100% accuracy, what if we defined some approximations to the traveling salesman
 problem? By approximating the problem, we can define algorithms that might not give us the right answer every time, but can execute
-much quicker than the brute force method. This is the crux of our program: by creating or implementing other algorithms for the
-traveling salesman problem, we can analyze each algorithm's runtime, accuracy, and optimization to find an optimal balance between
+much quicker than the brute force method. By creating or implementing other algorithms for the
+traveling salesman problem, each algorithm's runtime, accuracy, and optimization can be analyzed to find an optimal balance between
 time complexity and accuracy.
 
 ### How do these algorithms work?
 
-The Traveling Husky is named because our program is centered around the UW (see `locations/uw.csv`). However, since our program uses
-latitude and longitude coordinates to compute distances, a user can enter any locations on Earth and this program will still work.
-Therefore, the `locations` folder has many other location sets containing points around the United States and Earth.
+The Traveling Husky is named after a Husky because the program is inspired by the many unique paths that can be taken to and from locations around the University of Washington (see `locations/uw.csv`). However, since the program uses latitude and longitude coordinates to compute distances, a user can enter any locations on Earth and this program will still work. Therefore, the `locations` folder has many other location sets containing points around the United States and Earth.
 
-Our program contains five algorithms to solve or approximate the traveling salesman problem. 
-Two of them are existing algorithms (brute force and nearest neighbor) and three of them we came up with ourselves.
+There are five algorithms to solve or approximate the traveling salesman problem in this repository. 
+Two of them are existing algorithms (brute force and nearest neighbor) and three of them are self-created.
 
-**Brute force**: The pure brute force method runs in O(N!) time, but we optimized the brute force method using a branch-and-bound 
-approach. Our program's worst case complexity is still O(N!) time, but it usually runs quicker. 
-**Note: We restricted this algorithm to up to only 13 locations (cities) at once, because anything more takes a long time to compute.**
-However, if you have the time, you can run it with however many locations you'd like in the `Traveler.java` file :).
+**Brute force**: The pure brute force method runs in O(N!) time, but is optimized using a branch-and-bound 
+approach. The algorithm's worst case complexity is still O(N!) time, but it usually runs quicker. 
+**Note: This algorithm is restricted to up to only 13 locations (cities) at once, because anything more takes a long time to compute.**
+However, if you have the time, you can run it with however many locations you'd like in the `Traveler.java` file 😊.
 
-**Nearest neighbor**: This normally runs in O(N^2) time, but we optimized it so it can run in less than O(N^2) by keeping
+**Nearest neighbor**: This normally runs in O(N^2) time, but is optimized to run in less than O(N^2) by keeping
 track of already visited/compared cities. This algorithm chooses a city as a starting point, then repeatedly visits
 the nearest city until every city has been visited. Even though this many not be a perfect approach, it is much more efficient
 than the brute force algorithm's factorial time, usually semi-accurate (depending on each city's location), and is actually pretty
