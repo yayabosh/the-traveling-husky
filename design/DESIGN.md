@@ -1,6 +1,6 @@
 # Design Choices and Reasoning
 
-### Traveler.java, City.java & Route.java
+### Traveler.java, City.java, & Route.java
 
 These three files comprise the functionality of The Traveling Husky. 
 
@@ -23,20 +23,19 @@ be precise, especially for locations that are close together like around UW.
 Constructing a `Traveler` object with a location set allows you to call any algorithm.
 
 Inside the `Traveler` object are three fields.
-- `cities` is an array of `City` objects that holds all the locations for the given location set. We chose to make this an array
+- `cities` is an array of `City` objects that holds all the locations for the given location set. This is an array
 as opposed to a List or Set because the size of the number of cities at any point in the traveling salesman problem is fixed.
 Arrays also have O(1) retrieval time for a given element in the array, which makes traversal and rearrangement of the array simple.
 - `matrix` is a two dimensional `double` array. This matrix represents a distance matrix, where each row and column represents a
 `City`. Therefore, each element in a given row and column represents the distance from the `City` located in the row from the
-`City` located in the column. We chose to make a matrix array to make looking up the distance between two `City` objects an O(1)
-operation, since each `City` can be looked up in the matrix based off its id. Therefore, we only have to call our `distance()`
-function when we construct the `Traveler`, and the distances are stored there once and for all.
+`City` located in the column. The matrix array makes looking up the distance between two `City` objects an O(1)
+operation, since each `City` can be looked up in the matrix based off its id. Therefore, `distance()` only has to be called once, when the `Traveler` is constructed, and the distances are stored there once and for all.
 - `iterations` is an integer that is incremented in each algorithm when a new iteration of the method or algorithm is made. This
 differs for different methods. For example, for the brute force method, the number of iterations is random: based on the input,
 our branch-and-bound optimization can result in less or more recursive iterations. However, for other methods, like top-down,
 left-to-right, and random, the number of iterations/operations is fixed: sorting is always Nlog(N) operations, and shuffling the
 array is always N operations. `iterations` is then used to calculate the optimization of each algorithm compared to the algorithm's
-expected runtime: e.g. brute-force is expected to run in factorial time, but our optimization makes it run in less.
+expected runtime: e.g. brute-force is expected to run in factorial time, but the optimization makes it run in less.
 
 ### Main.java
 
@@ -45,17 +44,7 @@ into an array of `City` objects. Then, it constructs a `Traveler` to run algorit
 print statements that tell the user how to use the program, abstracting away the details of how each algorithm is run or how
 `Main.java` parses the CSV file.
 
-We originally chose to have a web app for our project, but after thinking about it, we realized a web app would basically accomplish
-the same functionality as a Java console app: we would still allow for users to input their own cities with latitudes and longitudes
-and we would still print out the statistics and comparisons for each algorithm. Plus, we didn't have much JavaScript experience
-and JavaScript typing and debugging is messy, making this already complicated problem more complex.
-
-To create a location set, all a user has to do is create a CSV file in `locations`. We chose CSV because it's easy for users to
-work with (simply separate city, latitude, and longitude with commas) and because we did not want the user to have to enter
-their locations into the console through a Scanner. (Note: users don't need to use CSV, but since the file is separated by commas,
-it made the most sense.)
-
-`Main.java` also has its own print method which we implemented to make each character print one by one (like Pokemon or a video
+`Main.java` also has its own print method which is implemented to make each character print one by one (like Pokémon or a video
 game) because having large blocks of Strings print all at once is unreadable and not as fun :). However, if the printing is taking
 too long, the user can simply hit `enter` and the entire String will print (like a skippable cutscene). This was implemented
-using Thread.sleep() and System.in.available(), two methods we learned by Googling.
+using Thread.sleep() and System.in.available().
