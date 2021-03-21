@@ -11,7 +11,7 @@ The problem asks:
 One of the easiest ways to think about solving this is using brute force: draw out every possible route combination between every 
 city and then compare each route by distance. The route combination with the shortest distance traveled is the winner. However, this 
 is easier said than done. Unfortunately, the brute force solution solves the traveling salesman problem in **factorial** time. 
-That's 😱O(N!)😱! This runtime is unacceptable (unless you want to wait around for a long time), but the solution is guaranteed to 
+That's O(N!) 😱! This runtime is unacceptable (unless you want to wait around for a long time), but the solution is guaranteed to 
 be 100% accurate.
 
 ### What if we didn't care about 100% accuracy? 
