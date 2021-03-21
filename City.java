@@ -12,7 +12,9 @@ public class City {
     }
 
     @Override
-    public String toString() { return name; }
+    public String toString() { 
+        return name; 
+    }
 
     public static City fromCsv(String line) {
         return fromCsv(line.split(","));
