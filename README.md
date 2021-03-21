@@ -16,7 +16,7 @@ be 100% accurate.
 
 ### What if we didn't care about 100% accuracy? 
 
-After all, if you weregiven 200 cities and asked to find the shortest route between them,
+If you were given 200 cities and asked to find the shortest route between them,
 being off by a few cities doesn't really matter *that* much. Plus, calculating the answer using brute force would take factorial time.
 200 factorial is such a large number [Google can't even define it](https://www.google.com/search?q=200!&rlz=1C1CHBF_enUS852US852&oq=200!)!
 
