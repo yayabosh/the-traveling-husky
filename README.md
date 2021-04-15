@@ -1,6 +1,6 @@
 # The Traveling Husky
 
-### An analysis of a difficult problem
+### Attacking a difficult problem
 
 The [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) is a famous problem in computer
 science. It's an NP-hard problem, which means not only is it difficult to solve, but once solved, it's hard to even the solution is correct!
