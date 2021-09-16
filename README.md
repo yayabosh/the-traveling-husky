@@ -6,7 +6,7 @@ The [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesm
 science. It's an NP-hard problem, which means not only is it difficult to solve, but once solved, it's hard to even determine if the solution is correct!
 The problem asks:
 
-**Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?**
+**Given a list of cities, the distances between each pair of cities, and a starting city, what is the shortest possible route that visits each city exactly once and returns to the starting city?**
 
 One of the easiest ways to think about solving this is using brute force: draw out every possible route combination between every 
 city and then compare each route by distance. The route combination with the shortest distance traveled is the winner. However, this 
