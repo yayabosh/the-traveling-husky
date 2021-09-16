@@ -3,7 +3,7 @@
 ### Attacking a difficult problem
 
 The [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) is a famous problem in computer
-science. It's an NP-hard problem, which means not only is it difficult to solve, but once solved, it's hard to even the solution is correct!
+science. It's an NP-hard problem, which means not only is it difficult to solve, but once solved, it's hard to even determine if the solution is correct!
 The problem asks:
 
 **Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?**
