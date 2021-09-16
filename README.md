@@ -16,9 +16,7 @@ be 100% accurate.
 
 ### What if we didn't care about 100% accuracy? 
 
-If you were given 200 cities and asked to find the shortest route between them,
-being off by a few cities doesn't really matter *that* much. Plus, calculating the answer using brute force would take factorial time.
-200 factorial is such a large number [Google can't even define it](https://www.google.com/search?q=200!&rlz=1C1CHBF_enUS852US852&oq=200!)!
+If you were given 200 cities and asked to find the shortest route between them, being off by a few cities in your final answer doesn't really matter *that* much. Plus, calculating the answer using brute force would take factorial time. 200 factorial is such a large number [Google can't even define it](https://www.google.com/search?q=200!&rlz=1C1CHBF_enUS852US852&oq=200!)!
 
 Therefore, since we don't necessarily care about 100% accuracy, what if we defined some approximations to the traveling salesman
 problem? By approximating the problem, we can define algorithms that might not give us the right answer every time, but can execute
