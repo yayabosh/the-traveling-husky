@@ -45,7 +45,7 @@ position on the "y-axis", i.e., visiting the city with the highest latitude firs
 next highest latitude until every city has been visited. Left to right does the same thing except with the x-axis, repeatedly
 visiting each city with the next highest longitude. These are not perfect, but in situations where cities are not uniformly distributed
 they can be very effective. Since these algorithms sort cities based on their latitudinal and longitudinal positions, it is not 
-optimized beyond Nlog(N).
+optimized beyond O(Nlog(N)).
 
 **😈 Random (personal favorite)**: Runs in O(N) time. The random algorithm simply returns a random route with all cities.
 It is nearly never accurate; however, because of it's efficient runtime, it can be simulated hundreds of thousands of times to get
